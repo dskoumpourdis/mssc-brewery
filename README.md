@@ -1,3 +1,3 @@
 # mssc-brewery
 
-Spring boot application example
+Spring boot microservice example
