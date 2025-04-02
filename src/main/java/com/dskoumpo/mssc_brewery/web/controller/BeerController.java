@@ -13,7 +13,7 @@ public class BeerController {
 
     @GetMapping("/{beerId}")
     public ResponseEntity<BeerDto> getBeerById(@PathVariable("beerId") UUID beerId) {
-        return new ResponseEntity<>(BeerDto.builder().build(), HttpStatus.OK);
+        return new ResponseEntity<>(BeerDto.builder().beerName("Neck Oil").build(), HttpStatus.OK);
     }
 
     @PostMapping
@@ -24,5 +24,10 @@ public class BeerController {
     @PutMapping("/{beerId}")
     public ResponseEntity<String> updateBeerById(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto) {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @DeleteMapping("/{beerId}")
+    public void deleteBeerById(@PathVariable("beerId") UUID beerId) {
+
     }
 }
